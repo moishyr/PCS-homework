@@ -1,0 +1,12 @@
+<hr/>
+<form id="loginForm">
+    <label>Name: <input name="name" id="nameInput" /></label>
+    <input type="submit" value="submit">
+</form>
+<div id="messagesPage">
+  <div id="messages"></div>
+  <form id="messageForm">
+    <input id="message"/>
+    <button>send</button>
+  </form>
+</div>
