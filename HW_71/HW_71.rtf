@@ -1,0 +1,31 @@
+start mongod
+
+mongo
+
+use school
+
+db.students.insert({first_name: 'Joe', last_name: 'smith', address: '123 6th ave.', grade: 9})
+
+db.students.insert({first_name: 'Bill', last_name: 'Jordan', address: '234 8th ave.', grade: 6})
+
+function addStudent(collection, fName, lName, address, grade) {
+... db[collection].insert({first_name: fName, last_name: lName, address: address, grade: grade})
+... }
+
+addStudent('students', 'bob', 'clinton', '345 trenton ct.', 4)
+
+addStudent('students', 'donald', 'trump', '456 princess ct.', 11)
+
+addStudent('students', 'mike', 'bloomberg', '576 princess ct.', 12)
+
+db.students.find({first_name: 'donald'})
+
+db.students.find({first_name: 'donald', grade: 5}).pretty()
+
+use store
+
+db.products.insert([{name: 'mp3 player', price: 23}, {name: 'laptop', price: 355}])
+
+db.products.find()
+
+db.products.remove({})

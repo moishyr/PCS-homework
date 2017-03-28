@@ -81,11 +81,3 @@ io.on('connection', socket => {
     // io.sockets.emit('disconnect', (app.locals.user + ' disconnected from the chat'));
   });
 });
-
-io.on('disconnect', socket => {
-  socket.on('disconnect', msg => {
-    io.sockets.emit('message', msg);
-    // io.sockets.emit('disconnect', (app.locals.user + ' disconnected from the chat'));
-  });
-  
-});

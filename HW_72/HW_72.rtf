@@ -1,0 +1,37 @@
+db.students.update({"_id": ObjectId("58be151e5f69bb58847c6662")},{"first_name": "Donald", "last_name": "Trump", address: "876 main st.",grade: 11})
+
+db.students.update({grade: 6},{$set: {grade: 7}}, {multi:true})
+
+Uptime: 1296 school 15> db.students.update({grade: 5}, {$inc: {grade: 1}}, {multi: true})
+
+Uptime: 1417 school 17> db.students.update({grade: 7}, {$set: {scores: [95, 98, 93]}}, {multi: true})
+
+Uptime: 1631 school 19> db.students.update({grade: 7}, {$push: {scores: {$each: [85, 86, 87, 88, 89]}}}, {multi: true})
+
+Uptime: 2012 school 21> db.students.update({grade: 7}, {$pop: {scores: 1}}, {multi: true})
+
+Uptime: 2324 school 23> db.students.update({grade: 7}, {$pull: {scores: 85}}, {multi: true})
+
+db.students.find({grade: {$gt: 7}}).pretty()
+
+db.students.find({$and: [{grade: {$gt: 7}}, {"first_name": "Joe"}]})
+
+Uptime: 4804 school 32> db.students.find({$or: [{grade: {$gt: 7}}, {"first_name": "Joe"}]})
+
+db.students.find({grade: {$ne: 7}}).pretty()
+
+db.students.find({grade: {$in: [6,7,8]}}).pretty()
+
+db.students.find({grade: {$nin: [6,8]}}).pretty()
+
+db.students.find({grade: {$not: {$gte: 7}}}).pretty()
+
+db.students.find().sort({"first_name": 1}).pretty()
+
+db.students.find().sort({"first_name": 1}).limit(3).pretty()
+
+db.students.find().sort({"first_name": 1}).limit(1).skip(3).pretty()
+
+Uptime: 6660 school 51> db.students.update({"last_name": "clinton"}, {$set: {"parents.mother": 'Hillary', "parents.father": 'Bill'}}, {multi: true})
+
+db.students.find({"parents.father": "Bill"}).pretty()

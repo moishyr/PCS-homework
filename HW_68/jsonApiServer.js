@@ -8,8 +8,8 @@ var server = http.createServer((request, response) => {
     response.setHeader('X-Powered-By', 'PCS');
     var requestUrl = url.parse(request.url, true),
         ISOFormat = '';
-    if(requestUrl.query['iso']) {
-        ISOFormat = requestUrl.query['iso'];
+    if(requestUrl.query.iso) {
+        ISOFormat = requestUrl.query.iso;
         var date = new Date(ISOFormat);
         
         switch(requestUrl.pathname) {
