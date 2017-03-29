@@ -1,0 +1,35 @@
+{{#posts}}
+<div id="{{_id}}" class="outerPostDiv">
+    <h2>{{title}}</h2>
+    <h3>by {{author}} at {{date}}</h3>
+    <div>{{content}}</div>
+    <button class="addComment">Add a comment</button>
+
+    <div class="commentsDiv"><span>click here to view comments</span>
+        <div id="commentContainer{{_id}}" style="display: none;">
+            {{#comments}}
+                <div class="comment">
+                    <div>{{comment}}</div>
+                    <div class="attribution">Posted by {{author}} at {{date}}</div>
+                </div>
+            {{/comments}}
+        </div>
+    </div>
+    <form class="commentsForm" method="post">
+        <div>
+            <h3>Add comments</h3>
+        </div>
+        <div>
+            Author:
+            <input type="text" name="author" placeholder="Enter Author name">
+        </div>
+        <div>
+            Comment:
+            <textarea name="comment" placeholder="Enter comment"></textarea>
+        </div>
+        <input type="hidden" name="id" value="{{_id}}"/>
+        <button>Submit</button>
+    </form>
+    
+</div>
+{{/posts}}

@@ -1,0 +1,11 @@
+<form method="post">
+    <div>
+        Title:
+        <input type="text" name="title" placeholder="Enter blog title"/>
+    </div>
+    <div>
+        Content:
+        <textarea name="content" placeholder="Enter blog content"></textarea>
+    </div>
+    <button>Submit</button>
+</form>

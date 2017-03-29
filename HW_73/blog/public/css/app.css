@@ -1,0 +1,44 @@
+body {
+    padding: 50px;
+    font: 14px "Lucinda Grande", Helvetica, Arial, sans-serif
+}
+
+header {
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+h1, h2, h3 {
+    margin: 0.5em auto;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 15em;
+}
+
+.comment {
+    font-size: .8em;
+    border: 1px dotted black;
+}
+
+.attribution {
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.commentsDiv span {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+.commentsForm {
+    display: none;
+}
