@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.css"></link>
+    {{#css}}
+    <link rel="stylesheet" href="{{.}}"></link>
+    {{/css}}
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        <h1>{{title}}</h1>
+        <h2>{{subtitle}}</h2>
+        {{#links}}
+        <a href="{{url}}">{{text}}</a>
+        {{/links}}
+    </header>
+    {{> content}}
+    {{#scripts}}
+    <script src="{{.}}"></script>
+    {{/scripts}}
+</body>
+</html>
