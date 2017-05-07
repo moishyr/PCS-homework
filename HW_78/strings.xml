@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MultipleActivities</string>
+    <string name="first_activity">First Activity</string>
+    <string name="enter_text">Enter Text</string>
+</resources>
